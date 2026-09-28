@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyTry | Try it. Love it. Buy it.</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="background-glow glow-one"></div>
+      <div class="background-glow glow-two"></div>
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="BuyTry home">
+          <span class="brand-mark">B</span>
+          <span>Buy<span>Try</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#collections">Collections</a>
+          <a href="#how-it-works">How it works</a>
+          <button class="nav-cta" data-target="login">Sign in</button>
+        </nav>
+      </header>
+
+      <main class="hero-layout">
+        <section class="hero-copy" aria-labelledby="hero-title">
+          <p class="eyebrow">The joy of finding your next favorite</p>
+          <h1 id="hero-title">Try it.<br /><em>Love it.</em><br />Buy it.</h1>
+          <p class="subtitle">
+            Discover pieces that feel like you. Try fashion at home, keep what you love, and send back what you don't.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" data-target="signup">Get Started <span aria-hidden="true">↗</span></button>
+            <a class="text-link" href="#collections">Explore the edit <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="trust-row">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>AM</span><span>JS</span><span>KL</span>
+            </div>
+            <p><strong>10k+</strong> happy shoppers styling their everyday</p>
+          </div>
+        </section>
+
+        <section class="fashion-collage" id="collections" aria-label="Featured fashion collection">
+          <div class="collage-label">New season<br /><strong>soft tailoring</strong></div>
+          <figure class="fashion-card portrait-card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Woman browsing a colorful fashion rack" />
+            <figcaption>Find your feeling <span>↗</span></figcaption>
+          </figure>
+          <figure class="fashion-card detail-card">
+            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85" alt="Colorful clothing on a fashion rack" />
+          </figure>
+          <figure class="fashion-card accessory-card">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=85" alt="Classic leather handbag" />
+          </figure>
+          <figure class="fashion-card shoe-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=85" alt="Bright red fashion sneaker" />
+          </figure>
+          <figure class="fashion-card jacket-card">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=500&q=85" alt="Neutral fashion jacket" />
+          </figure>
+          <div class="floating-note"><span>01</span> Curated<br />for you</div>
+        </section>
+      </main>
+
+      <section class="how-it-works" id="how-it-works" aria-label="How BuyTry works">
+        <span>01 / Browse</span><span>02 / Try at home</span><span>03 / Keep what you love</span>
+      </section>
+
+      <section class="auth-area" aria-label="Account access">
+        <section id="welcome-panel" class="panel active">
+          <div class="welcome-content">
+            <h2>Welcome to BuyTry</h2>
+            <p>
+              Your personal edit is just a few clicks away.
+            </p>
+            <div class="actions">
+              <button class="primary-btn" data-target="signup">Create account</button>
+              <button class="secondary-btn" data-target="login">Log in</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="auth-panel" class="panel auth-panel">
+          <div class="tabs">
+            <button class="tab active" data-form="login">Login</button>
+            <button class="tab" data-form="signup">Sign up</button>
+          </div>
+
+          <form id="login-form" class="auth-form active">
+            <h3>Welcome back</h3>
+            <label>
+              Email
+              <input type="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" placeholder="Enter your password" required />
+            </label>
+            <button type="submit" class="primary-btn full">Login</button>
+            <p class="form-note">Need an account? <a href="#" data-target="signup">Sign up</a></p>
+          </form>
+
+          <form id="signup-form" class="auth-form">
+            <h3>Create your account</h3>
+            <label>
+              Full name
+              <input type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" placeholder="Create a password" required />
+            </label>
+            <button type="submit" class="primary-btn full">Sign up</button>
+            <p class="form-note">Already have an account? <a href="#" data-target="login">Login</a></p>
+          </form>
+        </section>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

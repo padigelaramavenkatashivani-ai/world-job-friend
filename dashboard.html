@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Job Friend Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+    <div class="app-shell">
+      <header class="topbar glass-card">
+        <div class="brand">
+          <div class="logo">W</div>
+          <div>
+            <h2>World Job Friend</h2>
+            <p>Career Preparation Hub</p>
+          </div>
+        </div>
+
+        <div class="topbar-center">
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="text" placeholder="Search careers, courses, paths" />
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn">🔔</button>
+          <div class="profile-pill">
+            <div class="avatar">U</div>
+            <span id="user-name">User</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="hero glass-card">
+          <div>
+            <p class="eyebrow">Career readiness platform</p>
+            <h1>Welcome back, <span id="hero-name">Explorer</span></h1>
+            <p class="hero-copy">
+              Build your future with guided learning, skill assessments, and confidence-building resources.
+            </p>
+            <div class="hero-actions">
+              <button id="start-career-btn" class="primary-btn">Start Your Career Journey</button>
+              <button id="view-roadmaps-btn" class="secondary-btn">View Roadmaps</button>
+            </div>
+          </div>
+          <div class="hero-metric">
+            <div class="metric-card">
+              <strong>12</strong>
+              <span>Active tracks</span>
+            </div>
+            <div class="metric-card">
+              <strong>4.8/5</strong>
+              <span>Learning score</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="categories-section">
+          <div class="section-heading">
+            <h3>Career Categories</h3>
+            <a href="#">See all</a>
+          </div>
+          <div class="category-list">
+            <button class="chip active" data-category="Information Technology">Information Technology</button>
+            <button class="chip" data-category="Artificial Intelligence">Artificial Intelligence</button>
+            <button class="chip" data-category="Data Science">Data Science</button>
+            <button class="chip" data-category="Cyber Security">Cyber Security</button>
+            <button class="chip" data-category="Engineering">Engineering</button>
+            <button class="chip" data-category="Healthcare">Healthcare</button>
+            <button class="chip" data-category="Finance">Finance</button>
+            <button class="chip" data-category="Business">Business</button>
+            <button class="chip" data-category="Education">Education</button>
+            <button class="chip" data-category="Government Jobs">Government Jobs</button>
+            <button class="chip" data-category="Defence">Defence</button>
+            <button class="chip" data-category="Aviation">Aviation</button>
+            <button class="chip" data-category="Hospitality">Hospitality</button>
+            <button class="chip" data-category="Agriculture">Agriculture</button>
+            <button class="chip" data-category="Design & Media">Design & Media</button>
+            <button class="chip" data-category="Skilled Trades">Skilled Trades</button>
+            <button class="chip" data-category="Freelancing">Freelancing</button>
+            <button class="chip" data-category="Entrepreneurship">Entrepreneurship</button>
+            <button class="chip" data-category="Other">Other</button>
+          </div>
+
+          <div id="category-details" class="category-details glass-card hidden">
+            <div class="detail-header">
+              <button id="back-to-categories" class="secondary-btn small">← Back to categories</button>
+              <div>
+                <p class="eyebrow">Selected category</p>
+                <h3 id="detail-title">Information Technology</h3>
+              </div>
+            </div>
+
+            <div id="course-list-view">
+              <div id="course-grid" class="course-grid"></div>
+            </div>
+
+            <div id="lesson-view" class="lesson-view hidden">
+              <div class="detail-header">
+                <button id="back-to-courses" class="secondary-btn small">← Back to courses</button>
+                <div>
+                  <p class="eyebrow">Course lessons</p>
+                  <h3 id="lesson-title">Course title</h3>
+                </div>
+              </div>
+              <div id="lesson-content" class="lesson-content"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="careers-spotlight" class="careers-spotlight glass-card">
+          <div class="section-heading">
+            <h3>Featured Careers</h3>
+            <a href="#">Browse all</a>
+          </div>
+          <div id="featured-careers-grid" class="featured-careers-grid"></div>
+        </section>
+
+        <section class="cards-section" id="tools-section">
+          <div id="generic-tools-view" class="tools-view active">
+            <div class="section-heading">
+              <h3>Career Tools</h3>
+              <a href="#">Explore more</a>
+            </div>
+            <div class="cards-grid">
+              <article class="tool-card glass-card">
+                <div class="icon">🧭</div>
+                <h4>Explore Careers</h4>
+                <p>Discover roles that fit your strengths and interests.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">🗺️</div>
+                <h4>Learning Roadmaps</h4>
+                <p>Follow step-by-step guides for your chosen field.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">🎓</div>
+                <h4>Recommended Courses</h4>
+                <p>Find guided programs curated for career growth.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">📝</div>
+                <h4>Mock Tests</h4>
+                <p>Practice with real-world assessments and gain confidence.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">💬</div>
+                <h4>Interview Preparation</h4>
+                <p>Sharpen your answers with live-ready interview support.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">📄</div>
+                <h4>Resume Builder</h4>
+                <p>Create polished resumes tailored to your career goals.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">📊</div>
+                <h4>Skill Assessment</h4>
+                <p>Measure your strengths and identify the next milestone.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">📈</div>
+                <h4>Career Progress</h4>
+                <p>Track your growth and celebrate every milestone.</p>
+              </article>
+              <article class="tool-card glass-card">
+                <div class="icon">⭐</div>
+                <h4>Saved Careers</h4>
+                <p>Keep your favorite opportunities ready for later review.</p>
+              </article>
+            </div>
+          </div>
+
+          <div id="category-tools-view" class="tools-view hidden">
+            <div class="section-heading">
+              <button id="back-to-category-view" class="secondary-btn small">← Back</button>
+              <div>
+                <p class="eyebrow">Category tools</p>
+                <h3 id="category-tools-title">Career Tools</h3>
+              </div>
+            </div>
+            <div id="category-tools-grid" class="cards-grid"></div>
+          </div>
+
+          <div id="tool-detail-view" class="tool-detail-view hidden glass-card">
+            <div class="detail-header">
+              <button id="back-to-tools" class="secondary-btn small">← Back</button>
+              <div>
+                <p class="eyebrow">Tool details</p>
+                <h3 id="tool-detail-title">Tool Title</h3>
+              </div>
+            </div>
+            <div id="tool-detail-content" class="tool-detail-content"></div>
+          </div>
+        </section>
+      </main>
+
+      <section id="progress-panel" class="dashboard-panel glass-card hidden">
+        <div class="panel-header">
+          <p class="eyebrow">Your momentum</p>
+          <h3>Career Progress</h3>
+        </div>
+        <div class="progress-grid">
+          <div class="progress-card">
+            <span class="progress-label">Learning streak</span>
+            <strong>12 days</strong>
+            <small>Keep going to reach 20 days.</small>
+          </div>
+          <div class="progress-card">
+            <span class="progress-label">Roadmap completion</span>
+            <strong>68%</strong>
+            <small>Information Technology track</small>
+          </div>
+          <div class="progress-card">
+            <span class="progress-label">Skills unlocked</span>
+            <strong>9</strong>
+            <small>New strengths this month</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="profile-panel" class="dashboard-panel glass-card hidden">
+        <div class="panel-header">
+          <p class="eyebrow">Profile</p>
+          <h3>Your career profile</h3>
+        </div>
+        <div class="profile-summary">
+          <div class="avatar large">U</div>
+          <div>
+            <h4 id="profile-name">Explorer</h4>
+            <p>Career explorer · Learning mode: active</p>
+          </div>
+        </div>
+        <div class="profile-info">
+          <div><span>Focus</span><strong>Information Technology</strong></div>
+          <div><span>Goals</span><strong>Internship + certification</strong></div>
+          <div><span>Saved jobs</span><strong>5 opportunities</strong></div>
+        </div>
+      </section>
+
+      <nav class="bottom-nav glass-card">
+        <button class="nav-item active" data-nav="home">🏠<span>Home</span></button>
+        <button class="nav-item" data-nav="careers">💼<span>Careers</span></button>
+        <button class="nav-item" data-nav="learn">📘<span>Learn</span></button>
+        <button class="nav-item" data-nav="progress">📊<span>Progress</span></button>
+        <button class="nav-item" data-nav="profile">👤<span>Profile</span></button>
+      </nav>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
